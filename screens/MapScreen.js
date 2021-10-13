@@ -51,6 +51,9 @@ const MapScreen = ({ navigation, route }) => {
             return;
           }
           const location = e.nativeEvent.coordinate;
+          if (!location) {
+            return;
+          }
           setRegion({
             ...region,
             latitude: location.latitude,
