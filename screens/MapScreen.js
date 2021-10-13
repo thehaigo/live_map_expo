@@ -27,7 +27,6 @@ const MapScreen = ({ navigation, route }) => {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      console.log(location);
       setRegion({
         ...region,
         latitude: location.coords.latitude,
