@@ -21,7 +21,7 @@ const mapReducer = (state, action) => {
 
 const getMaps = (dispatch) => async () => {
   try {
-    const response = await liveMapApi.get("maps");
+    const response = await liveMapApi.get("/maps");
     dispatch({ type: GET_MAPS, payload: response.data });
   } catch (error) {
     dispatch({ type: ADD_ERROR, payload: error });
